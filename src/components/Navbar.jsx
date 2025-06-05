@@ -6,12 +6,18 @@ export const Navbar = () => {
 		<nav className="navbar navbar-light bg-light">
 			<div className="container">
 				<Link to="/">
-					<span className="navbar-brand mb-0 h1">React Boilerplate</span>
+					<span className="navbar-brand mb-0 h1">StarWars logo</span>
 				</Link>
-				<div className="ml-auto">
-					<Link to="/demo">
-						<button className="btn btn-primary">Check the Context in action</button>
+				<div className="btn-group dropend">
+					<Link to="/info" className="btn btn-secondary">
+						Info
 					</Link>
+					<button type="button" className="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+						<span className="visually-hidden">Toggle Dropend</span>
+					</button>
+					<ul className="dropdown-menu">
+						{/* <!-- Dropdown menu links --> */}
+					</ul>
 				</div>
 			</div>
 		</nav>
