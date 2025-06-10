@@ -9,10 +9,10 @@ export const CardInfo = ({ imageUrl, title, children, url, onToggleFavorite, isF
     const finalImageUrl = imageUrl && imageUrl.trim() !== '' ? imageUrl : defaultImageUrl;
 
     return (
-        <div className="card m-2" style={{ minWidth: "250px", flexShrink: 0 }}>
+        <div className="card m-2 p-2" style={{ minWidth: "250px", flexShrink: 0 }}>
             <img
                 src={finalImageUrl}
-                className="card-img-top "
+                className="card-img"
                 alt="Imagen de la tarjeta"
                 style={{ height: "18rem", objectFit: "cover", width: "100%" }}
                  />

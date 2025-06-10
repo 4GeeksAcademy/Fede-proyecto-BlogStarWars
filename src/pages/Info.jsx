@@ -94,7 +94,7 @@ export const Info = () => {
                 />
             </div>
             <div className="m-5">
-                <h2>Characters</h2>
+                <h2 className="text-danger">Characters</h2>
                 <HorizontalScroll>
                     <div className="d-flex flex-row flex-nowrap">
                         {store.people && store.people.length > 0 ?
@@ -118,7 +118,7 @@ export const Info = () => {
                 </HorizontalScroll>
             </div>
             <div className="m-5">
-                <h2>Planets</h2>
+                <h2 className="text-danger">Planets</h2>
                 <HorizontalScroll>
                     <div className="d-flex flex-row flex-nowrap">
                         {store.planets && store.planets.length > 0 ?

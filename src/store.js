@@ -29,9 +29,9 @@ export default function storeReducer(store, action = {}) {
                 planets: action.payload
             };
 
-    case 'toggle_favorite': // Esta acción aún maneja ambos tipos
+    case 'toggle_favorite': 
             const item = action.payload;
-            const itemType = action.itemType; // 'person' o 'planet'
+            const itemType = action.itemType;
 
             if (itemType === 'person') {
                 const isPersonFavorite = store.peopleFavorites.some(fav => fav.uid === item.uid);
@@ -39,7 +39,7 @@ export default function storeReducer(store, action = {}) {
                 if (isPersonFavorite) {
                     newPeopleFavorites = store.peopleFavorites.filter(fav => fav.uid !== item.uid);
                 } else {
-                    newPeopleFavorites = [...store.peopleFavorites, item]; // Añadimos el item completo
+                    newPeopleFavorites = [...store.peopleFavorites, item]; 
                 }
                 return {
                     ...store,
@@ -51,14 +51,14 @@ export default function storeReducer(store, action = {}) {
                 if (isPlanetFavorite) {
                     newPlanetFavorites = store.planetFavorites.filter(fav => fav.uid !== item.uid);
                 } else {
-                    newPlanetFavorites = [...store.planetFavorites, item]; // Añadimos el item completo
+                    newPlanetFavorites = [...store.planetFavorites, item]; 
                 }
                 return {
                     ...store,
                     planetFavorites: newPlanetFavorites
                 };
             }
-            // Si el itemType no es reconocido, no hacemos nada o lanzamos un error
+            
             return store;
 
     default:
